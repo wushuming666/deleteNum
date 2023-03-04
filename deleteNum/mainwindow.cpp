@@ -82,6 +82,7 @@ void MainWindow::startChange()
 QString MainWindow::solve(QString &line)
 {
     QString s = line;
+    if (s.size() && !s[0].isNumber()) return s;
     int i = 0;
     for (i = 0; i < s.size(); i ++)
     {
